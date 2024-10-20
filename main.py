@@ -24,7 +24,16 @@ form.subheader("Prompt")
 user_prompt = form.text_area("Enter your prompt here", height=200)
 
 if form.form_submit_button("Submit"):
+    
     st.toast(f"User Input Submitted - {user_prompt}")
-    response = hdb_json(user_prompt) #<--- This calls the `process_user_message` function that we have created 🆕
+
+    st.divider()
+
+    response, hdb_response = hdb_json(user_prompt)
     st.write(response)
-    print(f"User Input is {user_prompt}")
+
+    st.divider()
+
+    print(hdb_response)
+    df = pd.DataFrame(hdb_response)
+    df 
