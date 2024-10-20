@@ -9,7 +9,7 @@ from helper_functions import llm
 filepath = './data/resaleoct23.json'
 with open(filepath, 'r') as file:
     json_string = file.read()
-    dict_of_courses = json.loads(json_string)
+    dict_of_hdb = json.loads(json_string)
 
 
 def hdb_json(user_message):
