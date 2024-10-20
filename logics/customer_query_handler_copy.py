@@ -20,7 +20,7 @@ def hdb_json(user_message):
     Please answer based on the dict_of_hdb file.
     The customer service query will be enclosed in
     the pair of {delimiter}.
-
+    Your response must start with Answer:
     """
 
     messages =  [
