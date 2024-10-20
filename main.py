@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 # from helper_functions import llm
-from logics.customer_query_handler_copy import process_user_message
+from logics.customer_query_handler_copy import hdb_json
 from helper_functions.utility import check_password  
 
 # Check if the password is correct.  
@@ -29,5 +29,5 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    response, hdb_response = process_user_message(user_prompt)
+    response, hdb_response = hdb_json(user_prompt)
     st.write(response)

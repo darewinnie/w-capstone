@@ -34,8 +34,3 @@ def hdb_json(user_message):
    
     return hdb_response
     
-def process_user_message(user_input):
-    delimiter = "```"
-    reply = hdb_json(user_input)
-    
-    return reply
