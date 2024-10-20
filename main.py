@@ -29,7 +29,7 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    response, hdb_response = hdb_json(user_prompt)
+    response, hdb_response
     st.write(response)
 
     st.divider()
