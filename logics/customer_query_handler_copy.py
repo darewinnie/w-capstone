@@ -32,7 +32,7 @@ def hdb_json(user_message):
     ]
     hdb_response_str = llm.get_completion_by_messages(messages)
     hdb_response_str = hdb_response_str.replace("'", "\"")
-    hdb_response = json.loads(hdb_str)
+    hdb_response = json.loads(hdb_response_str)
     return hdb_response
     
     
