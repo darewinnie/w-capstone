@@ -16,7 +16,7 @@ def hdb_json(user_message):
     delimiter = "####"
 
     system_message = f"""
-    You will be provided with customer service queries. \
+    You will be provided with customer service queries about town and resale price. \
     The customer service query will be enclosed in
     the pair of {delimiter}.
 
