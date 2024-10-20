@@ -31,9 +31,3 @@ if form.form_submit_button("Submit"):
 
     response, hdb_response = process_user_message(user_prompt)
     st.write(response)
-
-    st.divider()
-
-    print(hdb_response)
-    df = pd.DataFrame(hdb_response)
-    df 

@@ -32,4 +32,9 @@ if form.form_submit_button("Submit"):
     response, course_details = process_user_message(user_prompt)
     st.write(response)
 
-  
+    st.divider()
+
+    print(course_details)
+    df = pd.DataFrame(course_details)
+    df 
+
