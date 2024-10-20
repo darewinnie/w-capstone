@@ -13,7 +13,7 @@ with open(filepath, 'r') as file:
 # Extract the value of the `dict_of_courses` dictionary
 # If you are not sure what the dictionary looks like, you can print it out
 list_of_dict = []
-for course_name, details_dict in dict_of_courses.items():
+for town, details_dict in dict_of_courses.items():
     list_of_dict.append(details_dict)
 
 # display the `dict_of_course` as a Pandas DataFrame
