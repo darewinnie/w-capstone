@@ -4,7 +4,7 @@ import json
 
 
 # Load the JSON file
-filepath = './data/courses-full.json'
+filepath = './data/resaleoct23.json'
 with open(filepath, 'r') as file:
     json_string = file.read()
     dict_of_courses = json.loads(json_string)
