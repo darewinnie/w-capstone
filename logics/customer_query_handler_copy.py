@@ -20,8 +20,6 @@ def hdb_json(user_message):
     The customer service query will be enclosed in
     the pair of {delimiter}.
 
-    Ensure your response contains only the list of dictionary objects or an empty list, \
-    without any enclosing tags or delimiters.
     """
 
     messages =  [
