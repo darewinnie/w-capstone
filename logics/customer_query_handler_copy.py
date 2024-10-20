@@ -12,7 +12,7 @@ with open(filepath, 'r') as file:
     dict_of_courses = json.loads(json_string)
 
 
-def hdb_json(user_message):
+def hdb_json(user_input):
     delimiter = "####"
 
     system_message = f"""
@@ -28,7 +28,7 @@ def hdb_json(user_message):
         {'role':'system',
          'content': system_message},
         {'role':'user',
-         'content': f"{delimiter}{user_message}{delimiter}"},
+         'content': f"{delimiter}{user_input}{delimiter}"},
     ]
     hdb_response_str = llm.get_completion_by_messages(messages)
     hdb_response_str = hdb_response_str.replace("'", "\"")
