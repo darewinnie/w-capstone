@@ -31,7 +31,8 @@ def hdb_json(user_message):
          'content': f"{delimiter}{user_message}{delimiter}"},
     ]
     hdb_response_str = llm.get_completion_by_messages(messages)
-    hdb_str = hdb_str.replace("'", "\"")
+    hdb_response_str = hdb_response_str.replace("'", "\"")
     hdb_response = json.loads(hdb_str)
     return hdb_response
+    
     
