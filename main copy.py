@@ -29,11 +29,11 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    response, hdb_response = process_user_message(user_prompt)
+    response, course_details = process_user_message(user_prompt)
     st.write(response)
 
     st.divider()
 
-    print(hdb_response)
-    df = pd.DataFrame(hdb_response)
+    print(course_details)
+    df = pd.DataFrame(course_details)
     df 
