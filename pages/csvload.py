@@ -1,6 +1,9 @@
 import pandas as pd
-import json
+import streamlit as st
 
+#Read CSV file from file
 df = pd.read_csv('./data/resaleoct23.csv')
 
-print(df.to_string)
+#Print CSV table
+st.title("Hello world!")  # add a title
+st.write(df)
