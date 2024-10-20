@@ -12,7 +12,7 @@ if not check_password():
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="centered",
-    page_title="My Streamlit App"
+    page_title="HDB Resale Price Finder from Year 2023"
 )
 # endregion <--------- Streamlit App Configuration --------->
 
@@ -21,7 +21,7 @@ st.title("Streamlit App")
 form = st.form(key="form")
 form.subheader("Prompt")
 
-user_prompt = form.text_area("Enter your prompt here", height=200)
+user_prompt = form.text_area("You may ask what is the avaerage price of 4 room in Ang Mo Kio town", height=200)
 
 if form.form_submit_button("Submit"):
     
