@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 # from helper_functions import llm
-from logics.customer_query_handler_copy import process_user_message
+from logics.customer_query_handler_copy import hdb_json
 from helper_functions.utility import check_password  
 
 # Check if the password is correct.  
