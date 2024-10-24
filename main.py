@@ -12,11 +12,11 @@ if not check_password():
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="centered",
-    page_title="HDB Resale Price Finder from Year 2023"
+    page_title="HDB Resale Price Finder"
 )
 # endregion <--------- Streamlit App Configuration --------->
 
-st.title("HDB Resale Price Finder from October 2023")
+st.title("HDB Resale Price Finder")
 
 form = st.form(key="form")
 form.subheader("Please ask me")
