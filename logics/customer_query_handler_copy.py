@@ -18,7 +18,7 @@ def hdb_json(user_message):
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price . \
     The customer service query will be enclosed in the pair of {delimiter}.
-    Please answer based on the JSON file. \
+    Please answer based on the resale JSON file. \
     Please take note:
     
     "month": " month of the year",
