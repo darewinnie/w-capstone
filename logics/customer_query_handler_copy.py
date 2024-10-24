@@ -18,7 +18,21 @@ def hdb_json(user_message):
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price . \
     Please answer based on the JSON file. \
-    Please remember you have data for October 2023, November 2023, December 2023, January 2024, February 2024, March 2024, April 2024, May 2024, June 2024, July 2024, August 2024, September 2024 and October 2024 as "month": "2024-10" refer to October 2024 \
+    Please take note:
+    {
+    "month": " month of the year",
+    "town": "town in Singapore for the resale flat",
+    "flat_type": "type of resale flat",
+    "block": "block name or number of the resale flat",
+    "street_name": "street name of the resale flat",
+    "storey_range": "range of storey for the resale flat",
+    "floor_area_sqm": "total floor area of the resale flat",
+    "flat_model": "type of flat model",
+    "lease_commence_date": "year of lease of commencement of the resal flat",
+    "remaining_lease": "73 years 07 months",
+    "resale_price": "amount of resale price",
+  }
+    
     Your response must start with Ans: \
     
     """
