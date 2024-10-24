@@ -17,6 +17,7 @@ def hdb_json(user_message):
 
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price . \
+    The customer service query will be enclosed in the pair of {delimiter}.
     Please answer based on the JSON file. \
     Please take note:
     
@@ -28,7 +29,7 @@ def hdb_json(user_message):
     "storey_range": "range of storey for the resale flat",
     "floor_area_sqm": "total floor area of the resale flat",
     "flat_model": "type of flat model",
-    "lease_commence_date": "year of lease of commencement of the resal flat",
+    "lease_commence_date": "year of lease of commencement of the resale flat",
     "remaining_lease": "73 years 07 months",
     "resale_price": "amount of resale price", \
 
