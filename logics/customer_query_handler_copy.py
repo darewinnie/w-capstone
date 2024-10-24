@@ -6,7 +6,7 @@ import openai
 from helper_functions import llm
 
 # Load the JSON file
-filepath = './data/resaleoct23.json'
+filepath = './data/resale.json'
 with open(filepath, 'r') as file:
     json_string = file.read()
     dict_of_hdb = json.loads(json_string)
@@ -17,7 +17,7 @@ def hdb_json(user_message):
 
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price from October 2023 to October 2024. \
-    Please answer based on the json file. \
+    Please answer based on the resale json file. \
     Please remember you have data from October 2023 to October 2024 as "month": "2024-10" refer to October 2024\   
     Your response must start with Ans: \
     
