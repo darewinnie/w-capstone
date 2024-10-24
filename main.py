@@ -16,10 +16,10 @@ st.set_page_config(
 )
 # endregion <--------- Streamlit App Configuration --------->
 
-st.title("Streamlit App")
+st.title("HDB Resale Price Finder from October 2023")
 
 form = st.form(key="form")
-form.subheader("Prompt")
+form.subheader("Please ask me")
 
 user_prompt = form.text_area("You may ask what is the average price of 4 room in Ang Mo Kio town", height=200)
 
