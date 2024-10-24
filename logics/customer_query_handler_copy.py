@@ -19,7 +19,7 @@ def hdb_json(user_message):
     You will be provided with customer service queries about hdb town and resale price . \
     Please answer based on the JSON file. \
     Please take note:
-    {
+    
     "month": " month of the year",
     "town": "town in Singapore for the resale flat",
     "flat_type": "type of resale flat",
@@ -30,8 +30,8 @@ def hdb_json(user_message):
     "flat_model": "type of flat model",
     "lease_commence_date": "year of lease of commencement of the resal flat",
     "remaining_lease": "73 years 07 months",
-    "resale_price": "amount of resale price",
-  }
+    "resale_price": "amount of resale price", \
+
     
     Your response must start with Ans: \
     
