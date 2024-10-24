@@ -19,7 +19,7 @@ def hdb_json(user_message):
     You will be provided with customer service queries about hdb town and resale price from october 2023 to october 2024. \
     The customer service query will be enclosed in the pair of {delimiter}.
     Please provide answer based on the resaleoct23 JSON file. \
-    Please note "2024-10" means October 2024
+    Please note month : "2024-10" means October 2024
     Your response must start with Ans: \
     
     """
