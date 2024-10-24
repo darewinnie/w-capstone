@@ -16,7 +16,7 @@ def hdb_json(user_message):
     delimiter = "####"
 
     system_message = f"""
-    You will be provided with customer service queries about hdb town and resale price. \
+    You will be provided with customer service queries about hdb town and resale price from october 2023 to october 2024. \
     Please answer based on the resaleoct23 json file. \
     Your response must start with Answer: \
     
