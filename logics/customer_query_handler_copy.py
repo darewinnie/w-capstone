@@ -18,7 +18,7 @@ def hdb_json(user_message):
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price from october 2023 to october 2024. \
     The customer service query will be enclosed in the pair of {delimiter}.
-    Please provide answer based on json_string \
+    Please provide answer based on this: {dict_of_hdb}. \
     Please note month : "2024-10" means October 2024 \
     Your response must start with Ans: \
     
