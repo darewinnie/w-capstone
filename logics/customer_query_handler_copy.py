@@ -31,6 +31,5 @@ def hdb_json(user_message):
          'content': f"{delimiter}{user_message}{delimiter}"},
     ]
     hdb_response = llm.get_completion_by_messages(messages)
-    hdb_response = hdb_response.split(delimiter)[-1]
     return hdb_response
     
