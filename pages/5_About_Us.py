@@ -7,11 +7,9 @@ st.set_page_config(
 )
 # endregion <--------- Streamlit App Configuration --------->
 
-st.title("About this App")
+st.title("About Us")
 
-st.write("This is a Streamlit App that demonstrates how to use the OpenAI API to generate text completions.")
+st.header("Project Scope")
 
-with st.expander("How to use this App"):
-    st.write("1. Enter your prompt in the text area.")
-    st.write("2. Click the 'Submit' button.")
-    st.write("3. The app will generate a text completion based on your prompt.")
+st.write("The application is for users to check out on past HDB resale data based on different categories (Eg. unit type, location, transaction year etc) to facilitate users to look for suitable HDB flat based on their budget.")
+
