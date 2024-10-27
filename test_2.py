@@ -77,5 +77,5 @@ def query_chain(question):
 
 
 # Invoke the chain with a sample question
-for chunk in query_chain("What was the average resale price in Oct 2024?"):
+for chunk in query_chain("what data do you have?"):
     print(chunk.content, end="")
