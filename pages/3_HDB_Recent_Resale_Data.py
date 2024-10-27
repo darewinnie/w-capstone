@@ -36,5 +36,5 @@ if selected_flat_type != "All":
 filtered_df = filtered_df[(filtered_df['resale_price'] >= selected_price_range[0]) & (filtered_df['resale_price'] <= selected_price_range[1])]
 
 # Display the filtered DataFrame
-st.subheader("Filtered Data")
+st.subheader("Filtered Recent Resale Data")
 st.write(filtered_df)

@@ -6,7 +6,7 @@ import openai
 from helper_functions import llm
 
 # Load the JSON file
-filepath = './data/resaleoct23.json'
+filepath = './data/resalehdb.json'
 with open(filepath, 'r') as file:
     json_string = file.read()
     dict_of_hdb = json.loads(json_string)
