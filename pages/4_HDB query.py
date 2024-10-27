@@ -30,5 +30,5 @@ if form.form_submit_button("Submit"):
 
     st.divider()
 
-    hdb_response = hdb_json2(user_prompt)
+    hdb_response = hdb_json_2(user_prompt)
     st.write(hdb_response)
