@@ -16,8 +16,8 @@ def hdb_json(user_message):
 
     system_message = f"""
     You will be provided with customer service queries about hdb town and resale price. \
-    Provide short answer based on dict_of_hdb json file.\
-    If you cannot get the answer from dict_of_hdb file, please say you dont know.\    
+    Please provide short answer based on dict_of_hdb json file.\
+       
     """
 
     messages =  [
