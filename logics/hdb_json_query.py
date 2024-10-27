@@ -45,7 +45,7 @@ print("Chroma database is ready for use.")
 
 
 # Template for the model prompt
-template = """You will be provided with customer service queries about hdb town and resale price from jan to october 2024.
+template = """You will be provided with customer service queries about hdb town and resale price from october 2023 to october 2024.
 Please note month : "2024-10" means October 2024
   Your response must start with Ans:
 Please provide answer based on:
