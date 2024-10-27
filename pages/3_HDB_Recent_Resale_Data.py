@@ -5,7 +5,7 @@ import streamlit as st
 df = pd.read_csv('./data/resaleoct23.csv')
 
 #Print CSV table
-st.title("HDB Resale Data ")  # add a title
+st.title("HDB Recent Resale Data 🏠")  # add a title
 st.write(df)
 
 # Add filters
