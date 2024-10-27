@@ -1,77 +1,73 @@
-import pandas as pd
 import streamlit as st
-import json
+import requests
+from bs4 import BeautifulSoup
 import openai
-from helper_functions import llm  
-# Ensure you have the OpenAI function defined here
-import tiktoken  
-# For token counting
+import tiktoken
+from helper_functions import llm
 
-# Load the JSON file
-filepath = './data/resaleoct23.json'
-with open(filepath, 'r') as file:
-    dict_of_hdb = json.load(file)
+def fetch_url_content(url):
+    """Fetch content from a given URL."""
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad responses
+        soup = BeautifulSoup(response.text, 'html.parser')
+        # Extract text from paragraphs
+        return ' '.join([p.get_text() for p in soup.find_all('p')])
+    except requests.RequestException as e:
+        st.error(f"Error fetching the URL: {e}")
+        return None
 
 def count_tokens(text, model="gpt-4"):
+    """Count the number of tokens in a text string."""
     encoding = tiktoken.encoding_for_model(model)
     return len(encoding.encode(text))
 
-def hdb_json(user_message):
-    delimiter = "####"
-    
-    system_message = f"""
-    You will be provided with customer service queries about HDB town and resale price from October 2023 to October 2024. 
-    The customer service query will be enclosed in the pair of {delimiter}.
-    Please provide answers based on the provided data. 
-    Please note: "2024-10" means October 2024. 
-    Your response must start with Ans: 
-    """
-
-    # Prepare the messages
-    messages = [
-        {'role': 'system', 'content': system_message},
-        {'role': 'user', 'content': f"{delimiter}{user_message}{delimiter}"},
-    ]
-
-    # Check the token count and chunk if necessary
-    total_tokens = count_tokens(system_message) + count_tokens(user_message)
-    
-    # Define a chunk size (example: max 3000 tokens)
-    max_chunk_size = 3000
-    
-    if total_tokens > max_chunk_size:
-        # Chunk the data
-        chunk_size = 100  # Adjust based on your data structure
-        chunks = [dict_of_hdb[i:i + chunk_size] for i in range(0, len(dict_of_hdb), chunk_size)]
-        
-        responses = []
-        for chunk in chunks:
-            # Convert chunk back to string if needed
-            chunk_data = json.dumps(chunk)  # or however you need to format it
-            messages.append({'role': 'assistant', 'content': chunk_data})
-
-            # Call the API with the chunk
-            hdb_response = llm.get_completion_by_messages(messages)
-            responses.append(hdb_response)
-        
-        return " ".join(responses)  # Combine responses
-    else:
-        # If under limit, proceed as normal
-        return llm.get_completion_by_messages(messages)
+def get_openai_response(prompt):
+    """Get a response from OpenAI's API."""
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",  # Use the preferred model
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response['choices'][0]['message']['content']
+    except Exception as e:
+        st.error(f"Error communicating with OpenAI: {e}")
+        return None
 
 # Streamlit UI
-st.title("HDB Resale Price Chatbot")
+st.title("OpenAI Chatbot from Web Content")
 
-# Input for user queries
-user_input = st.text_input("Ask a question about HDB towns and resale prices:")
+# Input for URL
+url = st.text_input("Enter the URL of the website you want to fetch content from:")
 
-if st.button("Get Answer"):
-    if user_input:
-        # Get the response from the model
-        response = hdb_json(user_input)
-        
-        # Display the response
-        st.subheader("Response")
-        st.write(response)
+if st.button("Fetch Content"):
+    if url:
+        content = fetch_url_content(url)
+        if content:
+            st.subheader("Fetched Content")
+            st.write(content[:500] + "...")  # Display the first 500 characters
+            st.session_state['fetched_content'] = content
+        else:
+            st.warning("Failed to fetch content from the provided URL.")
     else:
-        st.warning("Please enter a query.")
+        st.warning("Please enter a valid URL.")
+
+if 'fetched_content' in st.session_state:
+    user_input = st.text_input("Ask a question based on the fetched content:")
+    
+    if st.button("Get Answer"):
+        if user_input:
+            prompt = f"Based on the following content, answer the question:\n\n{st.session_state['fetched_content']}\n\nQuestion: {user_input}"
+            
+            # Check token limit
+            if count_tokens(prompt) > 4000:  # Adjust based on model limits
+                st.warning("The request is too large. Please ask a more specific question.")
+            else:
+                response = get_openai_response(prompt)
+                if response:
+                    st.subheader("OpenAI Response")
+                    st.write(response)
+        else:
+            st.warning("Please enter a question.")
+else:
+    st.warning("Please fetch content from a URL first.")

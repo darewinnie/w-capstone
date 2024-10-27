@@ -58,7 +58,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 # Set up the model
 llm = ChatOpenAI(
-    model="gpt-4o-mini", temperature=0, max_tokens=None, timeout=None, max_retries=2
+    model="gpt-4o", temperature=0, max_tokens=None, timeout=None, max_retries=2
 )
 
 
