@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 # from helper_functions import llm
-from logics.hdb_json_query import hdb_json2
+from logics.hdb_json_query import hdb_json_2
 from helper_functions.utility import check_password  
 
 # Check if the password is correct.  
