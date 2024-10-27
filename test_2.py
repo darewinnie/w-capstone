@@ -40,7 +40,7 @@ else:
         persist_directory=persist_directory, embedding_function=embedding_function
     )
 
-retriever = db.as_retriever(search_kwargs={"k": 2000})
+retriever = db.as_retriever(search_kwargs={"k": 5})
 print("Chroma database is ready for use.")
 
 
@@ -67,6 +67,7 @@ def query_chain(question):
     print("Retrieving documents...")
     # Retrieve relevant documents
     context_docs = retriever.get_relevant_documents(question)
+    print(context_docs)
     context = "\n".join(
         [doc.page_content for doc in context_docs]
     )  # Combine documents as context
@@ -77,5 +78,5 @@ def query_chain(question):
 
 
 # Invoke the chain with a sample question
-for chunk in query_chain("what data do you have?"):
+for chunk in query_chain("get data in jan 2024"):
     print(chunk.content, end="")

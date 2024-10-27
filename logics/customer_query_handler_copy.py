@@ -11,17 +11,13 @@ with open(filepath, 'r') as file:
     json_string = file.read()
     dict_of_hdb = json.loads(json_string)
 
-
 def hdb_json(user_message):
     delimiter = "####"
 
     system_message = f"""
-    You will be provided with customer service queries about hdb town and resale price . \
-    The customer service query will be enclosed in the pair of {delimiter}.
-    Please provide answer based on dict_of_hdb. \
-    Please note month : "2024-10" means October 2024 \
-    Your response must start with Ans: \
-    
+    You will be provided with customer service queries about hdb town and resale price. \
+    Provide short answer based on dict_of_hdb json file.\
+    If you cannot get the answer from dict_of_hdb file, please say you dont know.\    
     """
 
     messages =  [
