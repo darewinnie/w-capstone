@@ -1,10 +1,9 @@
 # Set up and run this Streamlit App
 import streamlit as st
 import pandas as pd
-from helper_functions import llm
+# from helper_functions import llm
 from logics.hdb_json_query import hdb_json_2
-from helper_functions.utility import check_password 
-
+from helper_functions.utility import check_password  
 
 # Check if the password is correct.  
 if not check_password():  
