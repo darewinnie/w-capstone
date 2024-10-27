@@ -19,7 +19,7 @@ st.set_page_config(
 st.title("HDB Resale Price Finder")
 
 form = st.form(key="form")
-form.subheader("Please ask me")
+form.subheader("Please ask me about recent hdb resale data")
 
 user_prompt = form.text_area("You may ask what is the average price of 4 room in Ang Mo Kio town", height=200)
 
