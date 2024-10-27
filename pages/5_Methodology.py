@@ -13,5 +13,5 @@ st.title("Methodology")
 image_path = "./data/drawio.png"
 
 # Display the image
-st.image(image_path, caption="This is a PNG image", use_column_width=True)
+st.image(image_path, caption="This is flow chart for 3 functions in the application", use_column_width=True)
 
