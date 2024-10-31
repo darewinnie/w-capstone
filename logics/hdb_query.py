@@ -66,7 +66,6 @@ def query_chain(question):
     print("Retrieving documents...")
     # Retrieve relevant documents
     context_docs = retriever.get_relevant_documents(question)
-    print(context_docs)
     context = "\n".join(
         [doc.page_content for doc in context_docs]
     )  # Combine documents as context
@@ -82,3 +81,7 @@ def hdb_json_2(query):
     for chunk in query_chain(query):
         yield chunk.content
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
