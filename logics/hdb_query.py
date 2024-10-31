@@ -77,7 +77,7 @@ def query_chain(question):
         yield chunk
 
 
-# Updated this part onwards. Use hdb_json_2 in your main.py file
+# to main.py
 def hdb_json_2(query):
     # Invoke the chain with a sample question
     for chunk in query_chain(query):
