@@ -26,5 +26,5 @@ st.header("Features")
 
 st.write("1. User Friendly Chatbot - User can enter their query regarding the recent HDB resale data.")
 st.write("2. HDB Loan Repayment Calculator -  User can use the calculator to estimate the budget requirement for downpayment and monthly installment requirement based on different interest rate.")
-st.write("3. HDB Recnt Resale Data Table - User can look for details of the recent HDB resale by using dropdown and slider filtering function. ")
+st.write("3. HDB Recent Resale Data Table - User can look for details of the recent HDB resale by using dropdown and slider filtering function. ")
 
