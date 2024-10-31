@@ -15,3 +15,5 @@ image_path = "./data/drawio.png"
 # Display the image
 st.image(image_path, caption="This is flow chart for 3 functions in the application", use_column_width=True)
 
+st.write (" Please read the readme file in my github depository https://github.com/darewinnie/w-capstone ")
+
