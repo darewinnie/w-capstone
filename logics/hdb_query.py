@@ -6,7 +6,6 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from tqdm import tqdm
 import os
-import chromadb
 
 load_dotenv()
 
@@ -81,8 +80,5 @@ def query_chain(question):
 def hdb_json_2(query):
     # Invoke the chain with a sample question
     for chunk in query_chain(query):
-        print(chunk.content, end="")
+        yield chunk.content
 
-
-my_query = "What was the average resale price in Ang Mo Kio for jan to oct 2024?"
-print(hdb_json_2(my_query))
