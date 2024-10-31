@@ -1,6 +1,4 @@
-import('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 from langchain_community.document_loaders import CSVLoader
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.vectorstores import Chroma
