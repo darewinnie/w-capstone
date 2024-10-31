@@ -19,7 +19,7 @@ st.write("1. Help user look for recent past HDB resale data easily.")
 st.write("2. Help user to estimate budget requirement (eg. downpayment and monthly installment).")
 st.write("3. Help user to look for details of recent past HDB resale data. ")
 
-st.header("Data source")
+st.header("Data Source")
 st.write("Resale flat prices based on registration date from Jan-2017 onwards:https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view.")
 
 st.header("Features")
