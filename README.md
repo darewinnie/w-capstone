@@ -1,6 +1,6 @@
 # Submission Details
 
-- Name: Winnie Chu
+- Name: Winnie Chu (https://github.com/darewinnie/w-capstone)
 
 # Issues
 
