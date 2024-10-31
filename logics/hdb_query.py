@@ -81,7 +81,3 @@ def hdb_json_2(query):
     for chunk in query_chain(query):
         yield chunk.content
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
