@@ -83,5 +83,5 @@ def hdb_json_2(query):
         print(chunk.content, end="")
 
 
-my_query = "What was the average resale price in Ang Mo Kio for Oct 2024?"
+my_query = "What was the average resale price in Ang Mo Kio for jan to oct 2024?"
 print(hdb_json_2(my_query))
