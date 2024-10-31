@@ -6,6 +6,7 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from tqdm import tqdm
 import os
+import chromadb
 
 load_dotenv()
 
