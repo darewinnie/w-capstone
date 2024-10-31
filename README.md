@@ -4,8 +4,8 @@
 
 # Issues
 
-- Unable to run my application's inference engine on Streamlit due to conflicting dependencies issue (discovered this after hours of troubleshooting). The application is able to run on a local server. Instructions are provided below.
-
+- Unable to run my application's inference engine (Chroma_db) on Streamlit due to conflicting dependencies issue (discovered this after hours of troubleshooting). The application is able to run on a local server. Instructions are provided below.
+  
 # How to Run App Locally
 
 1. Clone repository using `git clone https://github.com/darewinnie/w-capstone.git`
