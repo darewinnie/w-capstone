@@ -19,4 +19,5 @@
 6. Create a `.env` file in the project root folder and insert the following:
    - `OPENAI_API_KEY="<YOUR OPENAI KEY>"`
    - `OPENAI_MODEL_ANME="gpt-4o-mini"`
-7. Run the application using `streamlit run main.py`.
+7. Under main.py, deactivate line 6 and line 34 and activate line 7 and 35.
+8. . Run the application using `streamlit run main.py`.
