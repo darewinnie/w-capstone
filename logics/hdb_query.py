@@ -8,7 +8,7 @@ from tqdm import tqdm
 import os
 import('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop(‘pysqlite3’)
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 load_dotenv()
 
